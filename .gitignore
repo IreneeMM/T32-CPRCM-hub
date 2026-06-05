@@ -17,6 +17,8 @@ eggs/
 lib/
 lib64/
 parts/
+I4C_CPRCM_DATA
+I4C_CPRCM_CITY_DATA
 sdist/
 var/
 wheels/
@@ -24,6 +26,8 @@ share/python-wheels/
 *.egg-info/
 .installed.cfg
 *.egg
+*.nc
+utils
 MANIFEST
 
 # PyInstaller
