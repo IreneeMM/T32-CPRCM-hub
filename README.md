@@ -171,7 +171,7 @@ The following parameters must also be configured:
 
 
 ## Licence
-This project is distributed under the `<LICENCE_TYPE>` licence.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Authors
 Developed by Irene Morales Mena supervised by Ana Casanueva Vicente and Maria Dolores Frías Dominguez.
