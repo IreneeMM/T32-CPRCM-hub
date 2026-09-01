@@ -76,6 +76,16 @@ def variable_rural_urban(urban_file, rural_file, urmask, variable, city):
     months_in_numbers = [int(m) for m in np.unique(urban_file.time.dt.month.values)]
     subtitle = months_or_season(months_in_numbers)
 
+    # Variable's units:
+    if variable == 'hurs':
+        Variable_units = "% water vapour"
+    elif variable == 'huss':
+            Variable_units = "g/kg"
+            urban_file = urban_file*1000
+            rural_file = rural_file*1000 
+    else:
+        Variable_units = urban_file.attrs["units"]    
+
     # Set figure and axis:
     fig, ax = plt.subplots(figsize=(8, 6), constrained_layout=True)
 
@@ -140,11 +150,6 @@ def variable_rural_urban(urban_file, rural_file, urmask, variable, city):
         pad=0.04
     )
 
-    # Variable's units:
-    if urban_file.attrs["units"] == "1":
-        Variable_units = "g/Kg"
-    else:
-        Variable_units = urban_file.attrs["units"]
 
     cbar.set_label(f"{variable} ({Variable_units})")
 
